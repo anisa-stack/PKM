@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Kreatifitas Mahasiswa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== ICON SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M8 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm8 0a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 14.5c2.9.4 5 2.7 5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 2v5h5M9 12h6M9 16h6M9 8h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-spin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.2 5.9 16.8 11M16.8 13 7.2 18.1" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M9 15l6-6M8.5 12.5l-2 2a3.5 3.5 0 0 0 5 5l2-2M15.5 11.5l2-2a3.5 3.5 0 0 0-5-5l-2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 21V9m0 0 5 5m-5-5-5 5M4 5h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-restore" viewBox="0 0 24 24"><path d="M4 4v6h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.6 15A8 8 0 1 0 6 7.3L4 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 2h7l4 4v16H7V2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 22 20H2L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="10" width="8" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M21 15.5 15.5 10 6 19.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===== APP SHELL ===== -->
+<div class="app">
+
+  <!-- SIDEBAR / NAV -->
+  <header class="topbar">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="brand">
+        <img src="logo.png" alt="Program Kreatifitas Mahasiswa" class="brand-logo">
+        <span class="brand-name">Program Kreatifitas Mahasiswa</span>
+    </div>
+  </header>
+
+  <nav class="sidenav" id="sideNav">
+    <div class="sidenav-head">
+        <img src="logo.png" alt="Program Kreatifitas Mahasiswa" class="brand-logo">
+        <div>
+            <p class="sidenav-title">Program Kreatifitas</p>
+            <p class="sidenav-sub">Mahasiswa</p>
+        </div>
+    </div>
+    <ul class="nav-list" id="navList">
+      <li><button class="nav-item active" data-tab="dashboard"><svg class="ic"><use href="#i-dashboard"></use></svg><span>Dashboard</span></button></li>
+      <li><button class="nav-item" data-tab="anggota"><svg class="ic"><use href="#i-users"></use></svg><span>Anggota</span></button></li>
+      <li><button class="nav-item" data-tab="rencana"><svg class="ic"><use href="#i-doc"></use></svg><span>Rencana Project</span></button></li>
+      <li><button class="nav-item" data-tab="spin"><svg class="ic"><use href="#i-spin"></use></svg><span>Spin Tugas</span></button></li>
+      <li><button class="nav-item" data-tab="progres"><svg class="ic"><use href="#i-flow"></use></svg><span>Progres</span></button></li>
+      <li><button class="nav-item" data-tab="dokumentasi"><svg class="ic"><use href="#i-image"></use></svg><span>Dokumentasi</span></button></li>
+      <li><button class="nav-item" data-tab="sampah"><svg class="ic"><use href="#i-trash"></use></svg><span>Sampah</span></button></li>
+    </ul>
+    <div class="sidenav-foot">
+      <p>by Nur Anisa Fitri</p>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- ================= TAB: DASHBOARD ================= -->
+    <section class="tab-panel active" id="tab-dashboard">
+      <div class="panel-head">
+        <div>
+          <h1>Dashboard</h1>
+          <p class="panel-desc">Ringkasan progres tim PKM kamu.</p>
+        </div>
+      </div>
+      <div id="dashboardRoot"></div>
+    </section>
+
+    <!-- ================= TAB: ANGGOTA ================= -->
+    <section class="tab-panel" id="tab-anggota">
+      <div class="panel-head">
+        <div>
+          <h1>Anggota Tim</h1>
+          <p class="panel-desc">Kelola data anggota kelompok PKM kamu.</p>
+        </div>
+        <button class="btn btn-primary" id="btnTambahAnggota">
+          <svg class="ic"><use href="#i-plus"></use></svg> Tambah Anggota
+        </button>
+      </div>
+
+      <div class="card table-card">
+        <div class="table-scroll">
+          <table class="data-table" id="tableAnggota">
+            <thead>
+              <tr>
+                <th class="col-no">No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>No. Telp</th>
+                <th class="col-aksi">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="anggotaBody"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="anggotaEmpty">Belum ada anggota. Klik "Tambah Anggota" untuk mulai.</p>
+      </div>
+    </section>
+
+    <!-- ================= TAB: RENCANA PROJECT ================= -->
+    <section class="tab-panel" id="tab-rencana">
+      <div class="panel-head">
+        <div>
+          <h1>Rencana Project</h1>
+          <p class="panel-desc">Kumpulkan referensi mitra, kendala, dan solusi sebelum menentukan project.</p>
+        </div>
+        <button class="btn btn-primary" id="btnTambahReferensi">
+          <svg class="ic"><use href="#i-plus"></use></svg> Tambah Referensi
+        </button>
+      </div>
+
+      <div class="grid-cards" id="rencanaGrid"></div>
+      <p class="empty-state" id="rencanaEmpty">Belum ada referensi project. Klik "Tambah Referensi" untuk mulai.</p>
+    </section>
+
+    <!-- ================= TAB: SPIN ================= -->
+    <section class="tab-panel" id="tab-spin">
+      <div class="panel-head">
+        <div>
+          <h1>Spin Pembagian Tugas</h1>
+          <p class="panel-desc">Masukkan daftar tugas, lalu tarik tuas untuk membagi tugas secara acak ke anggota.</p>
+        </div>
+      </div>
+
+      <div class="spin-layout">
+        <div class="card spin-tasks-card">
+          <h3>Daftar Tugas</h3>
+          <form id="formTambahTugas" class="inline-form">
+            <input type="text" id="inputTugasBaru" placeholder="Nama tugas, mis. Desain Poster" required>
+            <button type="submit" class="btn btn-secondary btn-sm"><svg class="ic"><use href="#i-plus"></use></svg> Tambah</button>
+          </form>
+          <ul class="task-list" id="taskList"></ul>
+          <p class="empty-state" id="taskEmpty">Belum ada tugas ditambahkan.</p>
+        </div>
+
+        <div class="card spin-wheel-card">
+          <h3>Roda Undian</h3>
+          <p class="wheel-hint" id="wheelHint">Pilih salah satu tugas di bawah, lalu tarik tuas.</p>
+
+          <div class="wheel-stage">
+            <div class="wheel-pointer"></div>
+            <svg class="wheel-svg" id="wheelSvg" viewBox="0 0 300 300"></svg>
+            <button class="lever" id="leverBtn" aria-label="Tarik tuas untuk spin">
+              <span class="lever-track"><span class="lever-knob"></span></span>
+              <span class="lever-label">TARIK</span>
+            </button>
+          </div>
+
+          <div class="task-picker" id="taskPicker"></div>
+        </div>
+      </div>
+
+      <div class="card result-card">
+        <div class="result-card-head">
+          <h3>Hasil Pembagian</h3>
+          <button class="btn btn-ghost btn-sm" id="btnResetHasil">Reset Hasil</button>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table" id="tableHasilSpin">
+            <thead><tr><th>Tugas</th><th>Ditugaskan Kepada</th></tr></thead>
+            <tbody id="hasilSpinBody"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="hasilSpinEmpty">Belum ada hasil pembagian tugas.</p>
+      </div>
+    </section>
+
+    <!-- ================= TAB: PROGRES ================= -->
+    <section class="tab-panel" id="tab-progres">
+      <div class="panel-head">
+        <div>
+          <h1>Progres Project</h1>
+          <p class="panel-desc">Alur tahapan PKM untuk project yang sedang dipilih.</p>
+        </div>
+      </div>
+
+      <div class="card project-active-card" id="progresActiveInfo"></div>
+
+      <div class="stepper" id="progresStepper"></div>
+
+      <p class="empty-state" id="progresEmpty">Belum ada project yang dipilih. Buka tab "Rencana Project" lalu klik "Pilih" pada salah satu referensi.</p>
+    </section>
+
+    <!-- ================= TAB: DOKUMENTASI ================= -->
+    <section class="tab-panel" id="tab-dokumentasi">
+      <div class="panel-head">
+        <div>
+          <h1>Dokumentasi</h1>
+          <p class="panel-desc">Simpan foto atau bukti kegiatan penting, lengkap dengan caption biar gak lupa konteksnya.</p>
+        </div>
+        <button class="btn btn-primary" id="btnTambahDokumentasi">
+          <svg class="ic"><use href="#i-plus"></use></svg> Upload Dokumentasi
+        </button>
+      </div>
+
+      <div class="doc-grid" id="dokumentasiGrid"></div>
+      <p class="empty-state" id="dokumentasiEmpty">Belum ada dokumentasi. Klik "Upload Dokumentasi" untuk mulai.</p>
+    </section>
+
+    <!-- ================= TAB: SAMPAH ================= -->
+    <section class="tab-panel" id="tab-sampah">
+      <div class="panel-head">
+        <div>
+          <h1>Sampah</h1>
+          <p class="panel-desc">Data yang dihapus disimpan sementara di sini sebelum dihapus permanen.</p>
+        </div>
+        <button class="btn btn-outline-danger" id="btnKosongkanSampah">
+          <svg class="ic"><use href="#i-trash"></use></svg> Kosongkan Sampah
+        </button>
+      </div>
+
+      <div class="grid-cards" id="sampahGrid"></div>
+      <p class="empty-state" id="sampahEmpty">Sampah kosong.</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===== MODAL ROOT ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBox" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <h2 id="modalTitle">Judul</h2>
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
